@@ -14,4 +14,4 @@ df = pd.DataFrame(data=locations)
 st.map(df)            
 st.header('school info')
 info=st.button('more info')
-if info 
+#if info 
