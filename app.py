@@ -16,4 +16,4 @@ st.title('BEEF ANALYTICS')
 st.header('school info')
 if st.button('more info'):
     st.write('contact')
-st.sidebar
+st.sidebar.write('hi')
