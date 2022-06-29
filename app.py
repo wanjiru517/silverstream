@@ -12,5 +12,5 @@ locations= {"lat":[-0.467277],
             "lon":[37.450611]}
 df = pd.DataFrame(data=locations)
 st.map(df)            
-st.header('school info'
-         )
+st.header('school info')
+st.button('more info')
