@@ -11,7 +11,8 @@ st.write('LOCATED WITHIN THE HIGHLANDS OF EMBU COUNTY IS A PRODUCTIVE ENVIRONMEN
 locations= {"lat":[-0.467277], 
             "lon":[37.450611]}
 df = pd.DataFrame(data=locations)
-st.map(df)            
+st.map(df) 
+st.title('BEEF ANALYTICS')
 st.header('school info')
 info=st.button('more info')
 #if info 
