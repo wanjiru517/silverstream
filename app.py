@@ -14,5 +14,6 @@ df = pd.DataFrame(data=locations)
 st.map(df) 
 st.title('BEEF ANALYTICS')
 st.header('school info')
-info=st.button('more info')
-#if info 
+if st.button('more info'):
+    st.write('contact')
+st.sidebar
