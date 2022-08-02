@@ -18,4 +18,4 @@ st.header('school info')
 if st.button('more info'):
     st.write('contact')
 st.sidebar.write('hi')
-st.write('kathumi')
+st.write('More on bwlow')
