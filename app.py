@@ -4,8 +4,8 @@ import pandas as pd
 st.header('THE SILVERSTREAM ACADEMY')
 st.image('photos/Dash Team.PNG'
 
+st.header('ABOUT')
 st.text_area('LOCATED WITHIN THE HIGHLANDS OF EMBU COUNTY IS A PRODUCTIVE ENVIRONMENT SUITABLE AND FRIENDLY ENVIRONMENT THAT ENABLES YUR CHILD TO GROW AND BECOME PRODUCTIVE IN MANY AREAS')
-
 
 st.write('LOCATED WITHIN THE HIGHLANDS OF EMBU COUNTY IS A PRODUCTIVE ENVIRONMENT SUITABLE AND FRIENDLY ENVIRONMENT THAT ENABLES YUR CHILD TO GROW AND BECOME PRODUCTIVE IN MANY AREAS')
 
@@ -16,7 +16,5 @@ st.map(df)
 st.title('BEEF ANALYTICS')
 st.header('school info')
 if st.button('more info'):
-    st.write('contact 0716731548')
-    st.sidebar.write('hi')
-st.write('my name is')
-st.header('More info')
+    st.write('contact')
+st.sidebar.write('hi')
