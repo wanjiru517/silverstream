@@ -19,4 +19,3 @@ if st.button('more info'):
     st.write('contact 0716731548')
 st.sidebar.write ('KCPE RESULTS')
  # Load data from user 
-df = pd.read_excel('https://github.com/HenryMugai/silverstream/blob/733ba33ec8a6064837a87ff0b38568d27464cfa2/KCPE RESULTS..xlsx')
