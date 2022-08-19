@@ -15,4 +15,10 @@ st.title('KCSE RECORDS')
 
 if st.button('more info'):
     st.write('contact 0716731548')
-st.sidebar.write('hi')
+st.sidebar.write (
+    KCPE RESULTS.
+    KCPE 2021
+    KCPE 2020
+    KCPE 2019
+    KCPE 2018
+)
