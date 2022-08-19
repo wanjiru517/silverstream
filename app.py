@@ -12,8 +12,8 @@ locations= {"lat":[-0.467277],
             "lon":[37.450611]}
 df = pd.DataFrame(data=locations)
 st.map(df) 
-st.title('BEEF ANALYTICS')
-st.header('school info')
+st.title('KCSE RECORDS')
+
 if st.button('more info'):
-    st.write('contact')
+    st.write('contact 0716731548')
 st.sidebar.write('hi')
