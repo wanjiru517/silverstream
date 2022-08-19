@@ -1,4 +1,6 @@
 from http.cookies import Morsel
+from logging import makeLogRecord
+from unittest import result
 import streamlit as st
 import pandas as pd
 st.header('THE SILVERSTREAM ACADEMY')
@@ -16,8 +18,4 @@ st.title('KCSE RECORDS')
 if st.button('more info'):
     st.write('contact 0716731548')
 st.sidebar.write 
-   pd.read_csv('C:\Users\USER\silver stream\silverstream\KCPE RESULTS.2021.csv)
-    KCPE 2020
-    KCPE 2019
-    KCPE 2018
-
+  
