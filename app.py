@@ -15,9 +15,9 @@ st.title('KCSE RECORDS')
 
 if st.button('more info'):
     st.write('contact 0716731548')
-st.sidebar.write (
-    KCPE 2021
+st.sidebar.write 
+   pd.read_csv('C:\Users\USER\silver stream\silverstream\KCPE RESULTS.2021.csv)
     KCPE 2020
     KCPE 2019
     KCPE 2018
-)
+
