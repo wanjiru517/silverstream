@@ -17,5 +17,5 @@ st.title('KCSE RECORDS')
 
 if st.button('more info'):
     st.write('contact 0716731548')
-st.sidebar.write ('HELLO')
+st.sidebar.write ('KCPE RESULTS')
   
