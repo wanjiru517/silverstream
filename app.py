@@ -2,7 +2,7 @@ from http.cookies import Morsel
 import streamlit as st
 import pandas as pd
 st.header('THE SILVERSTREAM ACADEMY')
-st.image('photos/Dash Team.PNG')
+st.image('st 1.jpeg')
 
 st.text_area('LOCATED WITHIN THE HIGHLANDS OF EMBU COUNTY IS A PRODUCTIVE ENVIRONMENT SUITABLE AND FRIENDLY ENVIRONMENT THAT ENABLES YUR CHILD TO GROW AND BECOME PRODUCTIVE IN MANY AREAS')
 
