@@ -19,4 +19,4 @@ if st.button('more info'):
     st.write('contact 0716731548')
 st.sidebar.write ('KCPE RESULTS')
  # Load data from user 
-df = pd.read_excel("C:\Users\USER\Desktop\KCPE RESULTS..xlsx") 
+df = pd.read_excel("KCPE RESULTS.xlsx") 
