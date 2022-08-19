@@ -1,12 +1,12 @@
 from http.cookies import Morsel
 from logging import makeLogRecord
-from unittest import result
 import streamlit as st
 import pandas as pd
 st.header('THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
-st.text_area('LOCATED WITHIN THE HIGHLANDS OF EMBU COUNTY IS A PRODUCTIVE ENVIRONMENT SUITABLE AND FRIENDLY ENVIRONMENT THAT ENABLES YUR CHILD TO GROW AND BECOME PRODUCTIVE IN MANY AREAS')
+st.markdown(
+    'A simpe school dashboard outputing the school,s results since founding')
 st.image('st 2.jpeg')
 
 locations= {"lat":[-0.467277], 
@@ -18,4 +18,5 @@ st.title('KCSE RECORDS')
 if st.button('more info'):
     st.write('contact 0716731548')
 st.sidebar.write ('KCPE RESULTS')
-  
+ # Load data 
+df = pd.read_excel("C:\Users\USER\Desktop\KCPE RESULTS..xlsx") 
