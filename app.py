@@ -5,7 +5,7 @@ from logging import makeLogRecord
 import streamlit as st
 import pandas as pd
 st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
-st.markdown###('THE SILVERSTREAM ACADEMY')
+st.title('THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
 st.markdown(
