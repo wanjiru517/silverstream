@@ -1,4 +1,5 @@
 import csv
+import matplotlib
 from http.cookies import Morsel
 from json import load
 from logging import makeLogRecord
