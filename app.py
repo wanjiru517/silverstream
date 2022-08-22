@@ -16,8 +16,7 @@ st.image('st 2.jpeg')
 st.sidebar.write ('KCPE RESULTS')
  # Load exel data from user
 
-excel_file = 'KCPE RESULTS.xlxs'
-keyword = pd.read_excel(excel_file)
+
 locations= {"lat":[-0.467277], 
             "lon":[37.450611]}
 df = pd.DataFrame(data=locations)
