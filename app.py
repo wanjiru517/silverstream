@@ -1,6 +1,7 @@
 from ast import keyword
 import csv
 from curses.ascii import TAB
+from lib2to3.pytree import _Results
 from unicodedata import name
 from http.cookies import Morsel
 import streamlit as st
@@ -15,7 +16,7 @@ st.image('st 1.jpeg')
 excel_file = 'KCPE RESULTS.XLSX' 
 sheet_name  = '2018'
 
-df = pd.read_excel(excel_file,
+df = pd.read_excel( _Results,
                    sheet_name=2018)
 
 
