@@ -2,10 +2,7 @@ from ast import keyword
 import csv
 from curses.ascii import TAB
 from unicodedata import name
-import matplotlib
 from http.cookies import Morsel
-from json import load
-from logging import makeLogRecord
 import streamlit as st
 import pandas as pd
 import plotly as px
@@ -15,10 +12,10 @@ st.header('THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
 ### --- LOAD DATAFRAME
-csv.excel_tab = 'KCPE RESULTS.XLSX' 
-csv.excel  = '2018'
+excel_file = 'KCPE RESULTS.XLSX' 
+sheet_name  = '2018'
 
-df = pd.read_excel(csv.excel_tab,
+df = pd.read_excel(excel_file,
                    sheet_name=2018)
 
 
