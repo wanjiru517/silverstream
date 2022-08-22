@@ -16,8 +16,7 @@ st.image('st 1.jpeg')
 excel_file = 'KCPE RESULTS.XLSX' 
 sheet_name  = '2018'
 
-df = pd.read_excel( _Results,
-                   sheet_name=2018)
+df = pd.read_excel
 
 
 
