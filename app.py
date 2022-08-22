@@ -1,4 +1,6 @@
+import csv
 from http.cookies import Morsel
+from json import load
 from logging import makeLogRecord
 import streamlit as st
 import pandas as pd
@@ -18,4 +20,5 @@ st.title('KCSE RECORDS')
 if st.button('more info'):
     st.write('contact 0716731548')
 st.sidebar.write ('KCPE RESULTS')
- # Load data from user 
+ # Load data from desktop
+load = pd.read_csv('SILVERSTREAM/KCPE RESULTS 2020.csv')
