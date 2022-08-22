@@ -1,5 +1,5 @@
 streamlit
 pandas
-Pillow==8.1.0
-plotly==4.14.3
+Pillow
+plotly
 
