@@ -12,6 +12,12 @@ st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
 st.header('THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
+### --- LOAD DATAFRAME
+csv.excel_tab = 'KCPE RESULTS.XLSX' 
+
+
+
+
 st.markdown(
     'A simpe school dashboard outputing the school,s results since founding')
 st.image('st 2.jpeg')
