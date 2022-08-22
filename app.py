@@ -4,7 +4,7 @@ from json import load
 from logging import makeLogRecord
 import streamlit as st
 import pandas as pd
-st.header('THE SILVERSTREAM ACADEMY')
+st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
 st.markdown(
@@ -21,4 +21,4 @@ if st.button('more info'):
     st.write('contact 0716731548')
 st.sidebar.write ('KCPE RESULTS')
  # Load data from desktop
-load = pd.read_excel(r'C:\Users\USER\Desktop\KCPE RESULTS..xlsx')
+df= pd.read_excel(r'C:\Users\USER\Desktop\KCPE RESULTS..xlsx')
