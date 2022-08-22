@@ -12,6 +12,9 @@ st.image('st 1.jpeg')
 st.markdown(
     'A simpe school dashboard outputing the school,s results since founding')
 st.image('st 2.jpeg')
+st.sidebar.write ('KCPE RESULTS')
+ # Load exel data from user
+pd.read_csv("C:\Users\USER\silver stream\silverstream\KCPE RESULTS.2018.csv")
 
 locations= {"lat":[-0.467277], 
             "lon":[37.450611]}
@@ -21,6 +24,3 @@ st.title('KCSE RECORDS')
 
 if st.button('more info'):
     st.write('contact 0716731548')
-st.sidebar.write ('KCPE RESULTS')
- # Load data from desktop
-df= pd.read_xlsx('C:\Users\USER\silver stream\silverstream\KCPE RESULTS..xlsx')
