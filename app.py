@@ -15,7 +15,7 @@ st.image('st 2.jpeg')
 st.sidebar.write ('KCPE RESULTS')
  # Load exel data from user
 
-with pd.ExcelFile("C:\Users\USER\silver stream\silverstream\KCPE RESULTS..xlsx") as reader:
+with pd.ExcelFile(r"C:\Users\USER\silver stream\silverstream\KCPE RESULTS..xlsx") as reader:
     sheet1 = pd.read_excel(reader, sheet_name='Sheet1')
     sheet2 = pd.read_excel(reader, sheet_name='Sheet2')
     sheet3 = pd.read_excel(reader, sheet_name='Sheet3')
