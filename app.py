@@ -5,6 +5,7 @@ from unicodedata import name
 from http.cookies import Morsel
 import streamlit as st
 import pandas as pd
+from pandas import ExcelFile
 import plotly as px
 from PIL import Image
 st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
@@ -12,11 +13,9 @@ st.header('THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
 ### --- LOAD DATAFRAME
-excel_file = 'KCPE RESULTS.XLSX' 
-sheet_name  = '2018'
 
-df = pd.read_excel
-
+df = pd.read_excel('C:\Users\USER\silver stream\silverstream\KCPE RESULTS..xlsx')
+print(df('pd.2018'))
 
 
 st.markdown(
