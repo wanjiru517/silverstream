@@ -14,8 +14,8 @@ st.image('st 1.jpeg')
 
 ### --- LOAD DATAFRAME
 
-df = pd.read_excel('C:\Users\USER\silver stream\silverstream\KCPE RESULTS..xlsx')
-print(df('pd.2018'))
+df = pd.read_csv('C:\Users\USER\silver stream\silverstream\KCPE RESULTS.2018.csv')
+print(df)
 
 
 st.markdown(
