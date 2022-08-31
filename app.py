@@ -21,6 +21,8 @@ def get_data_from_excel():
     df = pd.read_excel
 
 
+
+
 st.markdown(
     'A simpe school dashboard outputing the school,s results since founding')
 st.image('st 2.jpeg')
