@@ -1,5 +1,4 @@
 
-from lib2to3.pytree import _Results
 from pkgutil import get_data
 from unicodedata import name
 from http.cookies import Morsel
