@@ -15,32 +15,36 @@ st.image('st 1.jpeg')
 
 ### --- LOAD DATAFRAME
 
-df = pd.read_excel (r'C:\Users\USER\silver stream\silverstream\KCPE RESULTS..xlsx')
+#Please rename your excel file to KCSE RESULTS.xlsx
+df_2018 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2018')
+df_2019 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2019')
+df_2020 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2020')
+df_2021 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2021')
+# Combining all datasets
+pdList = [df_2018, df_2019,  df_2020, df_2021]
+all_records = pd.concat(pdList)
      
-def get_data_from_excel():
-    df = pd.read_excel
-
-
-
 
 st.markdown(
     'A simpe school dashboard outputing the school,s results since founding')
 st.image('st 2.jpeg')
 #----SIDEBAR-----
 st.sidebar.header('Filter Here')
-ExcelFile = st.sidebar.multiselect(
-     "select the sheet:",
-              options=df["2018"].unique()
-              Options=df["2019"].unique()
-              options=df["2020"].unique()
-              options=df["2021"].unique()
-)
-            
-#---KCSE RESULTS PER YEAR[BAR CHART]----
-result_by_year = (df_selection.groupby(by=["2018"])
-)
+#use selectbox to select one option at a time
+options = st.sidebar._selectbox("select the sheet:",[2018,2019,2020,2021,'all'])
 
-result_by_year = (df_selection.groupby)
+if options == 2018:
+    st.write(df_2018)
+elif options == 2019:
+    st.write(df_2019)
+elif options == 2020:
+    st.write(df_2020)
+elif options == 2021:
+    st.write(df_2021)
+else:
+    st.write(all_records)           
+#---KCSE RESULTS PER YEAR[BAR CHART]----
+
 
 
  
