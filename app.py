@@ -15,7 +15,7 @@ st.header('THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
 ### --- LOAD DATAFRAME
-df = pd.read_excel('C:\Users\USER\silver stream\silverstream\KCPE RESULTS.xlsx')
+df = pd.read_excel("C:\\Users\\USER\\silver stream\\silverstream\\KCPE RESULTS.xlsx")
 print(df.head())
 #Please rename your excel file to KCSE RESULTS.xlsx
 df_2018 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2018')
