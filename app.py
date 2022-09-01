@@ -15,7 +15,7 @@ st.image('st 1.jpeg')
 ### --- LOAD DATAFRAME
 
 #Please rename your excel file to KCSE RESULTS.xlsx
-
+df_2018 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2018')
 df_2019 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2019')
 df_2020 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2020')
 df_2021 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2021')
