@@ -13,7 +13,7 @@ st.header('THE SILVERSTREAM ACADEMY')
 st.image('st 1.jpeg')
 
 ### --- LOAD DATAFRAME
-
+df = pd.read_excel('C:\Users\USER\silver stream\silverstream\KCPE RESULTS..xlsx')
 #Please rename your excel file to KCSE RESULTS.xlsx
 df_2018 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2018')
 df_2019 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2019')
@@ -26,6 +26,7 @@ all_records = pd.concat(pdList)
 
 st.markdown(
     'A simpe school dashboard outputing the school,s results since founding')
+
 st.image('st 2.jpeg')
 #----SIDEBAR-----
 st.sidebar.header('Filter Here')
