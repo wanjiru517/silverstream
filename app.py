@@ -7,7 +7,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 from secrets import choice
 import pandas as pd
-from pandas import ExcelFile
+from pandas import read_excel
 import plotly as px
 #---Main Page---
 st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
