@@ -1,5 +1,7 @@
 
 from email import header
+from importlib.metadata import files
+from msilib.schema import File
 from pkgutil import get_data
 from unicodedata import name
 from http.cookies import Morsel
@@ -14,6 +16,7 @@ import plotly as px
 #---Main Page---
 st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
 st.header('THE SILVERSTREAM ACADEMY')
+st.title('KCPE results analysis')
 st.image('st 1.jpeg')
 
 ### --- LOAD DATAFRAME
@@ -51,8 +54,6 @@ else:
 
 df_2019 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2019')        
 #---KCSE RESULTS [BAR CHART]----
-
-
 
  
 
