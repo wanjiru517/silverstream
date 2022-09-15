@@ -1,8 +1,10 @@
 
+from email import header
 from pkgutil import get_data
 from unicodedata import name
 from http.cookies import Morsel
 from unittest import result
+
 import streamlit as st
 import streamlit.components.v1 as components
 from secrets import choice
@@ -17,7 +19,7 @@ st.image('st 1.jpeg')
 ### --- LOAD DATAFRAME
 df = pd.read_excel("C:\\Users\\USER\\silver stream\\silverstream\\KCPE RESULTS.xlsx")
 print(df.head())
-#Please rename your excel file to KCSE RESULTS.xlsx
+## excel file KCSE RESULTS.xlsx
 df_2018 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2018')
 df_2019 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2019')
 df_2020 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2020')
@@ -30,7 +32,6 @@ all_records = pd.concat(pdList)
 st.markdown(
     'A simpe school dashboard outputing the school,s results since founding')
 
-st.image('st 2.jpeg')
 #----SIDEBAR-----
 st.sidebar.header('Filter Here')
 #use selectbox to select one option at a time
@@ -45,8 +46,11 @@ elif options == 2020:
 elif options == 2021:
     st.write(df_2021)
 else:
-    st.write(all_records)           
-#---KCSE RESULTS PER YEAR[BAR CHART]----
+    st.write(all_records)   
+#read data from 2019
+
+df_2019 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2019')        
+#---KCSE RESULTS [BAR CHART]----
 
 
 
