@@ -8,6 +8,7 @@ import streamlit as st
 import pandas as pd
 from pandas import ExcelFile
 import plotly as px
+import numpy as np
 #---Main Page---
 st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
 st.header('THE SILVERSTREAM ACADEMY')
@@ -25,9 +26,9 @@ pdList = [df_2018, df_2019,  df_2020, df_2021]
 all_records = pd.concat(pdList)   
 
 st.markdown(
-    'A simpe school dashboard outputing the school,s results since founding')
+    'The dashboard shows KCPE RESULTS as from 2018 to present')
 
-st.write("Sample performance")
+st.write("They are as follows,")
 #----SIDEBAR-----
 st.sidebar.header('Filter Here')
 #use selectbox to select one option at a time
@@ -45,6 +46,7 @@ else:
     st.write(all_records)
             
 # #---KCSE RESULTS PER YEAR[BAR CHART]----
+
 # result_by_year = (df_selection.groupby(by=["2018"])
 # )
 
