@@ -26,7 +26,7 @@ all_records = pd.concat(pdList)
 
 st.markdown(
     'A simpe school dashboard outputing the school,s results since founding')
-st.image('st 2.jpeg')
+
 st.write("Sample performance")
 #----SIDEBAR-----
 st.sidebar.header('Filter Here')
