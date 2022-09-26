@@ -45,14 +45,19 @@ elif options == 2021:
 else:
     st.write(all_records)
             
-# #---KCSE RESULTS PER YEAR[BAR CHART]----
+# #---CHART----
+data = {'KCPE RESULTS.xlsx'}
+df = pd.DataFrame(data)
 
-# result_by_year = (df_selection.groupby(by=["2018"])
-# )
+# Read all sheets of the workbook
+sheets = pd.read_excel('KCPE RESULTS.xlsx.', sheet_name='2018')
+for sheet_name, df in sheets.items():
+    df.plot(x='MATH', y='ENG', title=sheet_name)
 
-# result_by_year = (df_selection.groupby)
-
-
+#--graphs per sheets--
+for sheet_name in ("2018", "2019", "2020", "2021"):
+    df = sheet[sheet_name]
+    df.plot(x={'ENG','KIS','MATH','SCI','SSR'} y='TOTAL', title=sheet_name)
  
 
 if st.button('more info'):
