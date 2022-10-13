@@ -28,7 +28,7 @@ df_2019 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2019')
 df_2020 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2020')
 df_2021 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2021')
 
-df_2018 ['mean_score'] = df_2018.sum(axis=1)
+
 # Combining all datasets
 pdList = [df_2018, df_2019,  df_2020, df_2021]
 all_records = pd.concat(pdList)   
@@ -54,6 +54,8 @@ elif options == 2021:
 else:
     st.write(all_records)
             
-# #---CHARTSS--
-    
-st.write('contact 0716731548')
+# #---RESULTS BY SUBJECT--
+df_2018.plot(x="ENG", y="KIS", kind="box")
+plp.show()
+
+plp.scatter(df_2018['TOTAL'], df_2019['TOTAL'])
