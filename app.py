@@ -56,6 +56,17 @@ else:
             
 # #---RESULTS BY SUBJECT--
 df_2018.plot(x="ENG", y="KIS", kind="box")
-plp.show()
+plp.show() 
 
 plp.scatter(df_2018['TOTAL'], df_2019['TOTAL'])
+
+var = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2018')
+print(var)
+x = list(var['ENG'])
+y = list(var['KIS'])
+
+plp.figure(figsize=(10,10))
+plp.style.use('seaborn')
+plp.scatter(x,y,marker="*",s=100,edgecolors="black",c="yellow")
+plp.title("Excel sheet to Scatter Plot")
+plp.show()
