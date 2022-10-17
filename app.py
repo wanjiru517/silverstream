@@ -70,3 +70,4 @@ plp.style.use('seaborn')
 plp.scatter(x,y,marker="*",s=100,edgecolors="black",c="yellow")
 plp.title("Excel sheet to Scatter Plot")
 plp.show()
+
