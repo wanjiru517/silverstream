@@ -4,14 +4,10 @@ from ast import If
 from asyncore import write
 from cgitb import text
 from codecs import getencoder
-from email import header
 from logging import info
 from optparse import Values
 from os import rename
 from pkgutil import get_data
-from re import M
-from select import select
-from tkinter.font import names
 from unicodedata import name
 from http.cookies import Morsel
 from unittest import result
