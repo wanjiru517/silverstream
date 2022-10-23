@@ -2,10 +2,14 @@
 #from lib2to3.pytree import _Resultd
 from ast import If
 from asyncore import write
+from cgitb import text
+from email import header
+from logging import info
 from optparse import Values
 from os import rename
 from pkgutil import get_data
 from re import M
+from select import select
 from tkinter.font import names
 from unicodedata import name
 from http.cookies import Morsel
@@ -15,6 +19,7 @@ import pandas as pd
 from pandas import ExcelFile
 import plotly as px
 import numpy as np
+import plotly.figure_factory as ff
 import matplotlib.pyplot as plp
 
 #---Main Page---
@@ -22,7 +27,9 @@ st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
 st.header('THE SILVERSTREAM ACADEMY')
 st.title('KCPE results analysis')
 st.image('st 1.jpeg')
-
+st.write('The aplication shows and outputs the KCPE results of the students from the year 2018 to 2021.')
+st.subheader('ABOUT')
+st.write('The Silver Stream academy is a private primary school based in Embu, Kenya. It is a sole propreitorship ownership by Mr. Josphat K.Kathumi and family.')
 ### --- LOAD DATAFRAME
 
 df_2018 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2018')
@@ -34,12 +41,11 @@ df_2021 = pd.read_excel('KCPE RESULTS.xlsx', sheet_name='2021')
 # Combining all datasets
 pdList = [df_2018, df_2019,  df_2020, df_2021]
 all_records = pd.concat(pdList)   
-cols = [1, 2, 3, 4, 5, 6, 7]
 df = pdList
 
 st.markdown(
     'The dashboard shows KCPE RESULTS as from 2018 to present')
-df_2018.head()
+
 st.write("They are as follows,")
 #----SIDEBAR-----
 st.sidebar.header('Filter Here')
@@ -57,28 +63,20 @@ elif options == 2021:
 else:
     st.write(all_records)
             
-# #---RESULTS BY SUBJECT--
+#---AVERAGE GENDER RESULTS---
+st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
+#gender data data
+x1 = np.random.randn(200) - 2
+x2 = np.random.randn(200)
 
-options = st.sidebar.selectbox("select the subject:",[1, 2, 3, 4, 5, 6, 7])
+# Group data together
+hist_data = [x1, x2]
 
-if options == 1:
-    st.write(1)
-elif options == 2:
-    st.write(2)
-elif options == 3:
-    st.write(3)
-elif options == 4:
-    st.write(4)
-elif options == 5:
-    st.write(5)
-elif options == 6:
-    st.write(6)
-elif options == 7:
-    st.write(7)
+group_labels = ['MALE', 'FEMALE',]
 
-#---results per gender---
-gender = st.sidebar.multiselect(
-    "Select the Gender:",
-    options=df["M"].unique(),
-    default=df["F"].unique()
-)
+# Create distplot with custom bin_size
+fig = ff.create_distplot(
+        hist_data, group_labels, bin_size=[.1, .25])
+
+# Plot!
+st.plotly_chart(fig, use_container_width=True)
