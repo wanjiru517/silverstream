@@ -3,6 +3,7 @@
 from ast import If
 from asyncore import write
 from cgitb import text
+from codecs import getencoder
 from email import header
 from logging import info
 from optparse import Values
