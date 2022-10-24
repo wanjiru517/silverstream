@@ -1,5 +1,6 @@
 # silverstream
 the project explains the performance of the school's kcpe results since its founding,
+the data through jupiter has been analysed and presented for easier understanding to all.
 
 it displays a data frame outputing all results analysed to the max and easy to undestand.
 
