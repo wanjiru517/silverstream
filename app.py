@@ -103,7 +103,11 @@ zipped = list(zip(marks1, marks2, marks3, marks4))
 df = pd.DataFrame(zipped, columns=['2018', '2019', '2020', '2021'])
 df = df.T
 df.columns= subjects
-fig = px.line(df.T)
+fig = px.line(df.T, labels={
+                     "value": "Average marks",
+                     "index": "Subjects")})
+fig.update_xaxes(showgrid=False)
+fig.update_yaxes(showgrid=False)
 
 
 st.plotly_chart(fig)
