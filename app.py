@@ -105,7 +105,7 @@ df = df.T
 df.columns= subjects
 fig = px.line(df.T, labels={
                      "value": "Average marks",
-                     "index": "Subjects")})
+                     "index": "Subjects"})
 fig.update_xaxes(showgrid=False)
 fig.update_yaxes(showgrid=False)
 
