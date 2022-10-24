@@ -53,19 +53,19 @@ if options == 2018:
     st.write(df_2018)
     st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
 
-    st.line_chart(df_2018.GENDER.value_counts())
+    st.bar_chart(df_2018.GENDER.value_counts())
 elif options == 2019:
     st.write(df_2019)
     st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
-    st.line_chart(df_2019.GENDER.value_counts())
+    st.bar_chart(df_2019.GENDER.value_counts())
 elif options == 2020:
     st.write(df_2020)
     st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
-    st.line_chart(df_2020.GENDER.value_counts())
+    st.bar_chart(df_2020.GENDER.value_counts())
 elif options == 2021:
     st.write(df_2021)
     st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
-    st.line_chart(df_2021.GENDER.value_counts())
+    st.bar_chart(df_2021.GENDER.value_counts())
 
 else:
     st.write(all_records)
