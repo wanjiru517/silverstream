@@ -51,32 +51,43 @@ options = st.sidebar.selectbox("select the sheet:",[2018,2019,2020,2021, 'all'])
 
 if options == 2018:
     st.write(df_2018)
+    st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
+
+    st.line_chart(df_2018.GENDER.value_counts())
 elif options == 2019:
     st.write(df_2019)
+    st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
+    st.line_chart(df_2019.GENDER.value_counts())
 elif options == 2020:
     st.write(df_2020)
+    st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
+    st.line_chart(df_2020.GENDER.value_counts())
 elif options == 2021:
     st.write(df_2021)
+    st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
+    st.line_chart(df_2021.GENDER.value_counts())
+
 else:
     st.write(all_records)
+    st.line_chart(all_records.GENDER.value_counts())
             
 #---AVERAGE GENDER RESULTS---
-st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
-#gender data data
-x1 = np.random.randn(200) - 2
-x2 = np.random.randn(200)
+# st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
+# #gender data data
+# x1 = np.random.randn(200) - 2
+# x2 = np.random.randn(200)
 
-# Group data together
-hist_data = [x1, x2]
+# # Group data together
+# hist_data = [x1, x2]
 
-group_labels = ['MALE', 'FEMALE',]
+# group_labels = ['MALE', 'FEMALE',]
 
-# Create distplot with custom bin_size
-fig = ff.create_distplot(
-        hist_data, group_labels, bin_size=[.1, .25])
+# # Create distplot with custom bin_size
+# fig = ff.create_distplot(
+#         hist_data, group_labels, bin_size=[.1, .25])
 
-# Plot!
-st.plotly_chart(fig, use_container_width=True)
+# # Plot!
+# st.plotly_chart(fig, use_container_width=True)
 
 #--AVERAGE MEAN OF SUBJECTS FOR THE FOUR YEARS--=
 st.subheader('The avarege percentage of the subjects over the four years')
