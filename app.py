@@ -69,7 +69,7 @@ elif options == 2021:
 
 else:
     st.write(all_records)
-    st.line_chart(all_records.GENDER.value_counts())
+    st.bar_chart(all_records.GENDER.value_counts())
             
 #---AVERAGE GENDER RESULTS---
 # st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
