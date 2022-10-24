@@ -18,6 +18,7 @@ import plotly as px
 import numpy as np
 import plotly.figure_factory as ff
 import matplotlib.pyplot as plp
+import plotly.express as px
 
 #---Main Page---
 st.set_page_config(page_title='THE SILVERSTREAM ACADEMY')
