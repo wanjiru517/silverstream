@@ -77,3 +77,20 @@ fig = ff.create_distplot(
 
 # Plot!
 st.plotly_chart(fig, use_container_width=True)
+
+#--AVERAGE MEAN OF SUBJECTS FOR THE FOUR YEARS--=
+st.subheader('The avarege percentage of the subjects over the four years')
+data = [['ENG', 64.21], ['KISW', 58.80], ['MATH', 61.528], ['SCI', 59.58], ['SSR', 59.96]]
+df = pd.DataFrame(data, columns=['SUBJECT', 'AVERAGE %'])
+df
+
+# chart
+chart_data = pd.DataFrame(
+     np.random.randn(20, 2),
+     columns=['subject', 'average'])
+
+st.line_chart(chart_data)
+
+
+
+
