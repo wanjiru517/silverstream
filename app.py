@@ -71,23 +71,6 @@ else:
     st.write(all_records)
     st.bar_chart(all_records.GENDER.value_counts())
             
-#---AVERAGE GENDER RESULTS---
-# st.write('the graph below shows the average number of the students who have sat for the exam based on their gender')
-# #gender data data
-# x1 = np.random.randn(200) - 2
-# x2 = np.random.randn(200)
-
-# # Group data together
-# hist_data = [x1, x2]
-
-# group_labels = ['MALE', 'FEMALE',]
-
-# # Create distplot with custom bin_size
-# fig = ff.create_distplot(
-#         hist_data, group_labels, bin_size=[.1, .25])
-
-# # Plot!
-# st.plotly_chart(fig, use_container_width=True)
 
 #--AVERAGE MEAN OF SUBJECTS FOR THE FOUR YEARS--=
 st.subheader('The avarege percentage of the subjects over the four years')
@@ -97,12 +80,32 @@ df
 
 # chart
 st.title('comparison of the average results')
+subjects = ['ENG', 'KIS', 'MATH', 'SCI', 'SSR']
+marks1 = []
+for subject in subjects:
+    average=df_2018[subject].mean()
+    marks1.append(average)
+marks2 = []
+for subject in subjects:
+    average=df_2019[subject].mean()
+    marks2.append(average)
+marks3 = []
+for subject in subjects:
+    average=df_2020[subject].mean()
+    marks3.append(average)
+marks4 = []
+for subject in subjects:
+    average=df_2021[subject].mean()
+    marks4.append(average)
+    
+zipped = list(zip(marks1, marks2, marks3, marks4))
+df = pd.DataFrame(zipped, columns=['2018', '2019', '2020', '2021'])
+df = df.T
+df.columns= subjects
+fig = px.line(df.T)
 
-chart_data = pd.DataFrame(
-     np.random.randn(20, 2),
-     columns=['subject', 'average'])
 
-st.line_chart(chart_data)
+st.plotly_chart(fig)
 
 
 
