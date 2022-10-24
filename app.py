@@ -85,12 +85,13 @@ df = pd.DataFrame(data, columns=['SUBJECT', 'AVERAGE %'])
 df
 
 # chart
+st.title('comparison of the average results')
+
 chart_data = pd.DataFrame(
      np.random.randn(20, 2),
      columns=['subject', 'average'])
 
 st.line_chart(chart_data)
-
 
 
 
